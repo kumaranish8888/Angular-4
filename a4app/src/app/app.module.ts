@@ -7,14 +7,17 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 
 import { DataService } from './Services/data.service';
+import { CommentsService } from './Services/comments.service';
 import { AboutComponent } from './components/about/about.component';
 import { routing } from './app.routing';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    AboutComponent
+    AboutComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { routing } from './app.routing';
     HttpModule,
     routing
   ],
-  providers: [DataService],
+  providers: [DataService, CommentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
